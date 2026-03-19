@@ -1,0 +1,32 @@
+export const projects = [
+  {
+    id: 1,
+    name: "Axonara AI",
+    subtitle: "Adaptive Learning Platform",
+    description: "AI-powered system that adapts learning content based on cognitive load using NLP and machine learning. Includes summarization, concept extraction, mind maps, and flashcard generation.",
+    tech: ["FastAPI", "Transformers", "Sentence-Transformers", "Scikit-learn", "NetworkX", "Gradio"],
+    github: "https://github.com/AnantSinghTanwar-ux/AxonaraAI",
+    live: null,
+    status: "built",
+  },
+  {
+    id: 2,
+    name: "SkillSwap",
+    subtitle: "Skill Exchange Platform",
+    description: "Backend-driven platform enabling users to exchange and learn skills with authentication and structured workflows.",
+    tech: ["Java", "OOP"],
+    github: "https://github.com/AnantSinghTanwar-ux",
+    live: null,
+    status: "built",
+  },
+  {
+    id: 3,
+    name: "AutoPay Shield",
+    subtitle: "AI-Powered Insurance System",
+    description: "AI-powered parametric insurance system designed for gig workers, providing automated income protection based on real-world conditions like weather and disruptions. Built for the Guidewire Hackathon.",
+    tech: ["Node.js", "Backend", "AI"],
+    github: null,
+    live: null,
+    status: "wip",
+  },
+]
