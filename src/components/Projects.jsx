@@ -32,7 +32,7 @@ function ProjectCard({ project, index }) {
   const staggerClass = `stagger-${Math.min(index + 1, 4)}`
 
   return (
-    <div className={`animate-on-scroll ${staggerClass} group relative bg-glass border border-white/6 rounded-2xl p-6 overflow-hidden hover:-translate-y-2 hover:scale-[1.03] hover:border-purple-400 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300`}>
+    <div className={`animate-on-scroll ${staggerClass} group relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 overflow-hidden hover:-translate-y-1 hover:border-purple-400 hover:shadow-2xl hover:shadow-purple-500/15 transition-all duration-300`}>
       {/* Card inner glow on hover (CSS-only via group) */}
       <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
         style={{ background: 'radial-gradient(ellipse at 50% 0%, rgba(124,58,237,0.08) 0%, transparent 70%)' }}

@@ -21,14 +21,14 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
         scrolled
-          ? 'bg-glass border-b border-white/5 py-3'
+          ? 'bg-white/5 backdrop-blur-md border-b border-white/10 py-3'
           : 'bg-transparent py-5'
       }`}
     >
       <div className="section-container flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group">
-          <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center text-xs font-bold text-white transition-all duration-300 group-hover:shadow-[0_0_18px_rgba(124,58,237,0.7)] group-hover:scale-105">
+          <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center text-xs font-bold text-white transition-all duration-300 group-hover:shadow-[0_0_18px_rgba(139,92,246,0.7)] group-hover:scale-105">
             A
           </span>
           <span className="text-sm font-semibold text-[#f1f0ff] tracking-wide">
@@ -40,7 +40,7 @@ export default function Navbar() {
         <ul className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a href={link.href} className="nav-link">
+              <a href={link.href} className="nav-link text-gray-200 hover:text-purple-400 transition-colors">
                 {link.label}
               </a>
             </li>

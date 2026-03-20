@@ -39,9 +39,26 @@ export default function Hero() {
   return (
     <section 
       id="hero" 
-      className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden group"
+      className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden group bg-gradient-to-br from-[#050505] via-[#0a0a0f] to-[#0b0b15]"
       onMouseMove={handleMouseMove}
     >
+      {/* Anime neon background (Right side) */}
+      <div className="absolute top-0 right-0 w-[45%] h-full opacity-[0.4] pointer-events-none z-0 flex justify-end items-center">
+        <img 
+          src="/anime-bg.png" 
+          alt="Neon Anime Background" 
+          className="w-full h-full object-cover object-right"
+          style={{ maskImage: 'linear-gradient(to left, black 25%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to left, black 25%, transparent 100%)' }}
+        />
+      </div>
+
+      {/* Dark overlay to ensure text readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-transparent to-transparent pointer-events-none z-0" />
+
+      {/* Soft radial gradient behind text */}
+      <div className="absolute top-1/2 left-[20%] -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-purple-500/10 rounded-full blur-[120px] pointer-events-none z-0" />
+      <div className="absolute top-1/3 left-[40%] -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none z-0" />
+
       {/* Subtle glow following cursor */}
       <div 
         ref={glowRef}
@@ -79,38 +96,44 @@ export default function Hero() {
             <p className="text-xs font-mono text-violet-400 mb-4 tracking-[0.2em] uppercase opacity-80">
               AI / ML Developer
             </p>
-            <h1 className="font-extrabold leading-tight tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl whitespace-nowrap drop-shadow-[0_0_20px_rgba(139,92,246,0.5)]">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
+            <h1 className="font-extrabold leading-tight tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl whitespace-nowrap drop-shadow-[0_0_15px_rgba(139,92,246,0.3)]">
+              <span className="bg-gradient-to-r from-[#8b5cf6] to-[#3b82f6] bg-clip-text text-transparent">
                 Anant Singh Tanwar
               </span>
             </h1>
           </div>
 
           {/* Bio */}
-          <p className="text-[1.05rem] text-[#9ca3af] leading-relaxed max-w-lg" style={{ letterSpacing: '0.01em' }}>
+          <p className="text-[1.05rem] text-gray-300 leading-relaxed max-w-lg tracking-wide">
             I build{' '}
-            <span className="text-[#e9d5ff] font-medium">intelligent systems</span>
+            <span className="text-white font-medium">intelligent systems</span>
             {' '}and{' '}
-            <span className="text-[#e9d5ff] font-medium">scalable applications</span>
+            <span className="text-white font-medium">scalable applications</span>
             {' '}using machine learning, NLP, and backend engineering. Focused on solving real-world problems with efficient and practical solutions.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-wrap gap-3 items-center">
+          <div className="flex flex-wrap gap-3 items-center mt-2">
+            <a
+              href="/gpay-qr.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary transition-all duration-300 hover:scale-[1.05] active:scale-95 shadow-[0_0_15px_rgba(139,92,246,0.3)] hover:shadow-[0_0_25px_rgba(139,92,246,0.5)]"
+            >
+              <span className="text-[1.1em]">☕</span>
+              <span>Buy Me a Coffee</span>
+            </a>
             <a
               href="#projects"
-              className="btn-primary transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30 active:scale-95"
+              className="btn-secondary transition-all duration-300 hover:scale-105 active:scale-95 border-white/10 hover:border-purple-400 hover:bg-white/5"
             >
               <span>View Work</span>
-              <svg className="arrow-icon" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
             </a>
             <a
               href="https://github.com/AnantSinghTanwar-ux"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30 active:scale-95"
+              className="btn-secondary transition-all duration-300 hover:scale-105 active:scale-95 border-white/10 hover:border-purple-400 hover:bg-white/5"
             >
               <GithubIcon />
               GitHub
@@ -119,7 +142,7 @@ export default function Hero() {
               href="https://www.linkedin.com/in/anant-singh-tanwar-715b54343/"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30 active:scale-95"
+              className="btn-secondary transition-all duration-300 hover:scale-105 active:scale-95 border-white/10 hover:border-purple-400 hover:bg-white/5"
             >
               <LinkedInIcon />
               LinkedIn
