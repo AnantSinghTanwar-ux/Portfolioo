@@ -1,9 +1,7 @@
 import { useRef, useEffect } from 'react'
 import { techStack } from '../data/techStack'
-
 export default function TechStack() {
   const sectionRef = useRef(null)
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add('visible')),
@@ -12,26 +10,24 @@ export default function TechStack() {
     sectionRef.current?.querySelectorAll('.animate-on-scroll').forEach((el) => observer.observe(el))
     return () => observer.disconnect()
   }, [])
-
   return (
-    <section id="techstack" className="py-20" ref={sectionRef}>
+    <section id="techstack" className="py-24" ref={sectionRef}>
       <div className="section-container">
         <h2 className="section-title">Tech Stack</h2>
-
-        <div className="flex flex-col gap-7">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {techStack.map((group, i) => (
-            <div
-              key={group.category}
-              className={`animate-on-scroll stagger-${Math.min(i + 1, 4)}`}
+            <div 
+              key={group.category} 
+              className={`animate-on-scroll stagger-${Math.min(i + 1, 4)} group bg-[#0a0a0a] border border-purple-500/20 rounded-2xl p-6 md:p-7 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-purple-500/50 hover:shadow-[0_0_20px_rgba(168,85,247,0.2)]`}
             >
-              <p className="text-[10px] font-mono text-violet-400/60 uppercase tracking-[0.18em] mb-3">
+              <h3 className="text-xs font-mono text-[#a855f7] tracking-wider uppercase mb-5">
                 {group.category}
-              </p>
-              <div className="flex flex-wrap gap-2">
+              </h3>
+              <div className="flex flex-wrap gap-2 md:gap-2.5">
                 {group.items.map((item) => (
-                  <span
-                    key={item}
-                    className="tech-tag hover:-translate-y-0.5 hover:scale-[1.02] hover:bg-purple-500/15 hover:border-purple-400 hover:text-purple-200 hover:shadow-[0_0_12px_rgba(168,85,247,0.25)] relative z-10 hover:z-20 transition-all duration-300"
+                  <span 
+                    key={item} 
+                    className="bg-[#111111] border border-white/5 rounded-full px-3 py-1.5 text-sm text-gray-200 transition-colors duration-200 hover:text-white hover:bg-white/5"
                   >
                     {item}
                   </span>
