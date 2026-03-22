@@ -11,7 +11,7 @@ export default function Projects() {
     return () => observer.disconnect()
   }, [])
   return (
-    <section id="projects" className="py-24" ref={sectionRef}>
+    <section id="projects" className="py-12" ref={sectionRef}>
       <div className="section-container">
         <h2 className="section-title">Selected Work</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -31,19 +31,19 @@ function ProjectCard({ project, index }) {
   // Refined hover and layout rules
   const baseCardClasses = isNocturne 
     ? 'relative border border-white/10 rounded-2xl overflow-hidden animate-on-scroll ' + staggerClass
-    : `animate-on-scroll ${staggerClass} group relative bg-black border border-white/10 rounded-2xl p-6 overflow-hidden transition-all duration-300 ease-out hover:-translate-y-1 hover:border-violet-500/50 hover:shadow-[0_0_30px_rgba(139,92,246,0.35)] hover:scale-[1.02]`
+    : `animate-on-scroll ${staggerClass} group relative bg-zinc-950 border border-white/10 rounded-2xl p-6 overflow-hidden transition-all duration-300 ease-out hover:-translate-y-1 hover:border-gray-500/50 hover:shadow-[0_0_30px_rgba(156,163,175,0.35)] hover:scale-[1.02]`
 
   if (isNocturne) {
     return (
       <div className={baseCardClasses}>
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm z-20 flex items-center justify-center">
-          <span className="px-3 py-1.5 rounded-full border border-violet-500/30 bg-violet-500/10 text-violet-400 text-[11px] font-bold tracking-[0.2em] uppercase shadow-[0_0_20px_rgba(139,92,246,0.2)]">
+        <div className="absolute inset-0 bg-zinc-950/40 backdrop-blur-sm z-20 flex items-center justify-center">
+          <span className="px-3 py-1.5 rounded-full border border-gray-500/30 bg-gray-500/10 text-gray-300 text-[11px] font-bold tracking-[0.2em] uppercase shadow-[0_0_20px_rgba(156,163,175,0.2)]">
             COMING SOON
           </span>
         </div>
         <div className="p-6 blur-sm opacity-70">
           <div className="relative flex items-start justify-between mb-4">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600/25 to-indigo-600/25 border border-violet-500/20 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-gray-600/25 to-gray-400/25 border border-gray-500/20 flex items-center justify-center">
               <FolderIcon />
             </div>
           </div>
@@ -67,7 +67,7 @@ function ProjectCard({ project, index }) {
     <div className={baseCardClasses}>
       {/* Top row */}
       <div className="relative flex items-start justify-between mb-4">
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600/25 to-indigo-600/25 border border-violet-500/20 flex items-center justify-center">
+        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-gray-600/25 to-gray-400/25 border border-gray-500/20 flex items-center justify-center">
           <FolderIcon />
         </div>
         <div className="flex items-center gap-2">
@@ -85,7 +85,7 @@ function ProjectCard({ project, index }) {
       </div>
       {/* Name + subtitle */}
       <div className="relative mb-2">
-        <h3 className="text-[0.95rem] font-semibold text-white group-hover:text-violet-300 transition-all duration-300 leading-snug">
+        <h3 className="text-[0.95rem] font-semibold text-white group-hover:text-gray-300 transition-all duration-300 leading-snug">
           {project.name}
         </h3>
         {project.subtitle && (
@@ -118,7 +118,7 @@ function ProjectCard({ project, index }) {
       </div>
       {/* GitHub link */}
       {project.github && !isWip && (
-        <a href={project.github} target="_blank" rel="noopener noreferrer" className="relative inline-flex items-center gap-1.5 mt-4 text-[11px] text-[#6b7280] hover:text-violet-400 transition-colors duration-200 group/link">
+        <a href={project.github} target="_blank" rel="noopener noreferrer" className="relative inline-flex items-center gap-1.5 mt-4 text-[11px] text-[#6b7280] hover:text-gray-300 transition-colors duration-200 group/link">
           <GithubIcon size={11} />
           <span className="group-hover/link:underline">View on GitHub →</span>
         </a>

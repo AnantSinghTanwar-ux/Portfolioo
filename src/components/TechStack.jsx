@@ -11,14 +11,14 @@ export default function TechStack() {
     return () => observer.disconnect()
   }, [])
   return (
-    <section id="techstack" className="py-24" ref={sectionRef}>
+    <section id="techstack" className="py-12" ref={sectionRef}>
       <div className="section-container">
         <h2 className="section-title">Tech Stack</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {techStack.map((group, i) => (
             <div 
               key={group.category} 
-              className={`animate-on-scroll stagger-${Math.min(i + 1, 4)} group bg-[#0a0a0a] border border-purple-500/20 rounded-2xl p-6 md:p-7 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-purple-500/50 hover:shadow-[0_0_20px_rgba(168,85,247,0.2)]`}
+              className={`animate-on-scroll stagger-${Math.min(i + 1, 4)} group bg-zinc-900 border border-gray-500/20 rounded-2xl p-6 md:p-7 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-gray-500/50 hover:shadow-[0_0_20px_rgba(156,163,175,0.2)]`}
             >
               <h3 className="text-xs font-mono text-[#a855f7] tracking-wider uppercase mb-5">
                 {group.category}
