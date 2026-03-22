@@ -5,21 +5,24 @@ import Projects from './components/Projects'
 import TechStack from './components/TechStack'
 import Achievements from './components/Achievements'
 import Contact from './components/Contact'
+import HoverStars from './components/HoverStars'
 
 export default function App() {
   return (
-    <div className="relative bg-black min-h-screen">
+    <div className="relative bg-zinc-950 min-h-screen z-0">
+      <HoverStars />
+      
       {/* 3. Dotted Margins (Vertical Guide Lines) */}
       <div 
-        className="fixed top-0 bottom-0 pointer-events-none z-0 border-l-[1.5px] border-dashed"
-        style={{ left: '15vw', borderColor: 'rgba(168, 85, 247, 0.3)' }}
+        className="fixed top-0 bottom-0 pointer-events-none z-0 border-l-[1.5px] border-dashed hidden md:block"
+        style={{ left: '8vw', borderColor: 'rgba(156, 163, 175, 0.15)' }}
       />
       <div 
-        className="fixed top-0 bottom-0 pointer-events-none z-0 border-r-[1.5px] border-dashed"
-        style={{ right: '15vw', borderColor: 'rgba(168, 85, 247, 0.3)' }}
+        className="fixed top-0 bottom-0 pointer-events-none z-0 border-r-[1.5px] border-dashed hidden md:block"
+        style={{ right: '8vw', borderColor: 'rgba(156, 163, 175, 0.15)' }}
       />
 
-      <div className="relative z-10">
+      <div className="relative z-10 w-full overflow-hidden">
         <Navbar />
         <main>
           <Hero />

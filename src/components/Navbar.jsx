@@ -20,7 +20,7 @@ export default function Navbar() {
       <div className="section-container flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group">
-          <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center text-xs font-bold text-white transition-all duration-300 group-hover:shadow-[0_0_18px_rgba(139,92,246,0.7)] group-hover:scale-105">
+          <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-gray-600 to-gray-400 flex items-center justify-center text-xs font-bold text-white transition-all duration-300 group-hover:shadow-[0_0_18px_rgba(156,163,175,0.3)] group-hover:scale-105">
             A
           </span>
           <span className="text-sm font-semibold text-[#f1f0ff] tracking-wide">
@@ -31,7 +31,7 @@ export default function Navbar() {
         <ul className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a href={link.href} className="nav-link text-gray-200 hover:text-purple-400 transition-colors">
+              <a href={link.href} className="nav-link text-gray-200 hover:text-gray-300 transition-colors">
                 {link.label}
               </a>
             </li>
@@ -56,7 +56,7 @@ export default function Navbar() {
       {menuOpen && (
         <div className="md:hidden bg-glass border-b border-white/5 px-6 py-4 flex flex-col gap-5">
           {navLinks.map((link) => (
-            <a key={link.href} href={link.href} onClick={() => setMenuOpen(false)} className="nav-link text-sm relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-purple-400 after:transition-all hover:after:w-full hover:text-white transition-colors duration-300" >
+            <a key={link.href} href={link.href} onClick={() => setMenuOpen(false)} className="nav-link text-sm relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-gray-400 after:transition-all hover:after:w-full hover:text-white transition-colors duration-300" >
               {link.label}
             </a>
           ))}

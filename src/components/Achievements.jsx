@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react'
 import { achievements } from '../data/achievements'
-const prizeColors = { amber: 'bg-amber-500/12 text-amber-300 border-amber-500/30', purple: 'bg-violet-500/12 text-violet-300 border-violet-500/30', blue: 'bg-blue-500/12 text-blue-300 border-blue-500/30', }
+const prizeColors = { amber: 'bg-amber-500/12 text-amber-300 border-amber-500/30', gray: 'bg-gray-500/12 text-gray-300 border-gray-500/30', blue: 'bg-blue-500/12 text-blue-300 border-blue-500/30', }
 export default function Achievements() {
   const sectionRef = useRef(null)
   useEffect(() => {
@@ -12,7 +12,7 @@ export default function Achievements() {
     return () => observer.disconnect()
   }, [])
   return (
-    <section id="achievements" className="py-24" ref={sectionRef}>
+    <section id="achievements" className="py-12" ref={sectionRef}>
       <div className="section-container">
         <h2 className="section-title">Achievements</h2>
         <div className="flex flex-col gap-4">
@@ -26,7 +26,7 @@ export default function Achievements() {
                   <div className="flex items-center gap-2 flex-wrap mb-2">
                     <TrophyIcon />
                     <span className="text-sm font-semibold text-[#f1f0ff]">{a.event}</span>
-                    <span className={`px-2 py-0.5 rounded-full text-[11px] font-medium border ${prizeColors[a.prizeColor] || prizeColors.purple}`}>
+                    <span className={`px-2 py-0.5 rounded-full text-[11px] font-medium border ${prizeColors[a.prizeColor] || prizeColors.gray}`}>
                       🏆 {a.prize}
                     </span>
                   </div>
@@ -44,7 +44,7 @@ export default function Achievements() {
                     </span>
                   </div>
                 </div>
-                <a href={a.link} target="_blank" rel="noopener noreferrer" className="shrink-0 px-4 py-1.5 rounded-full border border-white/8 group-hover:border-violet-500/40 text-xs text-[#9ca3af] group-hover:text-white transition-all duration-200 whitespace-nowrap hover:bg-violet-500/10" >
+                <a href={a.link} target="_blank" rel="noopener noreferrer" className="shrink-0 px-4 py-1.5 rounded-full border border-white/8 group-hover:border-gray-500/40 text-xs text-[#9ca3af] group-hover:text-white transition-all duration-200 whitespace-nowrap hover:bg-gray-500/10" >
                   View Project →
                 </a>
               </div>

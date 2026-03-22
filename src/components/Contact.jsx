@@ -38,24 +38,24 @@ const socials = [
 ]
 export default function Contact() {
   return (
-    <footer id="contact" className="py-24 border-t border-white/10">
+    <footer id="contact" className="py-12 border-t border-white/10">
       <div className="section-container">
         <div className="flex flex-col items-center text-center gap-8">
           {/* Heading */}
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-3"> Let's Build Something{' '} <span className="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent"> Great </span> </h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-3"> Let's Build Something{' '} <span className="bg-gradient-to-r from-gray-300 to-gray-500 bg-clip-text text-transparent"> Great </span> </h2>
             <p className="text-[#9ca3af] text-sm sm:text-base max-w-md"> Open to collaborations, research roles, and interesting problems. </p>
           </div>
           {/* Social icon links */}
           <div className="flex items-center gap-3">
             {socials.map((s) => (
-              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} className="w-10 h-10 rounded-full bg-glass border border-white/8 hover:border-violet-500/50 flex items-center justify-center text-[#6b7280] hover:text-white hover:bg-violet-500/10 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/20" >
+              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} className="w-10 h-10 rounded-full bg-glass border border-white/8 hover:border-gray-500/50 flex items-center justify-center text-[#6b7280] hover:text-white hover:bg-gray-500/10 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-gray-500/20" >
                 {s.icon}
               </a>
             ))}
           </div>
           {/* Email (small, text only) */}
-          <a href="mailto:anantsinghtanwar@gmail.com" className="text-xs text-[#6b7280] hover:text-violet-400 transition-colors duration-200" > anantsinghtanwar@gmail.com </a>
+          <a href="mailto:anantsinghtanwar@gmail.com" className="text-xs text-[#6b7280] hover:text-gray-300 transition-colors duration-200" > anantsinghtanwar@gmail.com </a>
           {/* Footer bottom */}
           <div className="text-xs text-[#4b5563] pt-4 border-t border-white/5 w-full text-center"> © 2026 Anant Singh Tanwar · Built with React + Vite + Tailwind </div>
         </div>
